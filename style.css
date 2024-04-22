@@ -1,0 +1,625 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    background-color: #000000;
+}
+header{
+    width: 100%;
+    height: 100vh;
+}
+nav{
+
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    max-height: 50px;
+    transition: .3s;
+    overflow: hidden;
+    
+}
+nav .logo p{
+    font-size: 20px;
+    font-weight: bold;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-left: 20px ; 
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: .2s;
+}
+nav ul li a:hover{
+    color: #ff9900;
+}
+nav .fa-bars{
+    display: none;
+    cursor: pointer;
+}
+
+
+/*-------Responsive Navbar---------*/
+@media screen and (max-width:670px){
+    .logo{
+        position: fixed;
+        top: 15px;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: inline-block;
+        padding: 50px 5% 10px;
+        background-color: #000000;
+        width: 100%;
+        text-align: right;
+    }
+    nav ul li{
+        display: block;
+        margin: 10px 0 ; 
+    }
+    nav .fa-bars {
+        display: block;
+        top: 15px;
+        font-size: 24px;
+        position: fixed;
+        right: 5%;
+        top: 15px;
+    }
+    .content-box .content{
+        margin-top: 50px;
+    }
+    .hidemenu{
+        max-height: 300px;
+        border-bottom: 1px solid #ff9900;
+  
+    }
+    
+}
+
+/*-------Header Content---------*/
+.content-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 5%;
+}
+.content-box .content {
+    color: #fff;
+    overflow: hidden;
+}
+.content-box .content p{
+    font-size: 20px;
+}
+.content-box .content h3{
+    font-size: 60px;
+    margin: 10px 0;
+}
+.content-box .content .myposition span{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.content-box .content .myposition .text2{
+    color: #ff9900;
+    position: relative;
+    
+}
+.content-box .content .myposition .text2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    border-left: 2px solid #ff9900;
+    animation: animate 4s steps(16)  infinite;
+    
+}
+@keyframes animate{
+    0% {left: 0px;}
+    50% {left: 104%;}
+    100% {left: 0%;}
+}
+.content-box .content .discription{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    max-width:400px;
+    color: #e2e2e2;
+}
+.content .btn-group{
+    margin-top: 40px;
+    display: flex;
+}
+.btn-group .btn-hire{
+    background-color: #ff9900;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-right: 20px;
+    transition: .2s;
+}
+.btn-group .btn-hire:hover{
+    background-color: #ff6600;
+}
+.btn-group .btn-download{
+    font-size:16px;
+    color: #ff9900;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 13px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+}
+.btn-group .btn-download:hover{
+    color: #ff6600;
+}
+.content-box .content .socila-icon{
+    margin-top: 30px;
+}
+.content-box .content .socila-icon i{
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+.content-box .content .socila-icon i:hover{
+    color: #ff9900;
+}
+.man{
+    width: 470px;
+}
+
+/*------Header Content Responsive------*/
+@media screen and (max-width:890px){
+    header{
+        width: 100%;
+        height: 100%;
+    }
+    .content-box{
+        margin-top: 30px;
+    }
+    .content-box .content p{
+        font-size: 17px;
+    }
+    .content-box .content h3{
+        font-size: 35px;
+        margin: 10px 0;
+    }
+    .content-box .content .myposition span{
+        font-size: 20px;
+    }
+    .content-box .content .discription{
+        font-size: 12px;
+        max-width:300px;
+    }
+    .content .btn-group{
+        margin-top: 30px;
+    }
+    .btn-group .btn-hire{
+        background-color: #ff9900;
+        padding: 8px 18px;
+        font-size: 18px;
+        margin-right: 15px;
+    }
+    .btn-group .btn-download{
+        font-size:16px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .content-box .content .socila-icon i{
+        font-size: 22px;
+        margin-right: 10px;
+    }
+    .man{
+        width: 45%;
+    }
+    
+}
+
+@media screen and (max-width:670px){
+    .content-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 7%;
+    }
+
+    .content-box .content h3{
+        font-size: 38px;
+        margin: 10px 0;
+    }
+    .content-box .content .discription{
+        font-size: 12px;
+        max-width:500px;
+    }
+  
+    .content-box .content .socila-icon i{
+        font-size: 22px;
+        margin-right: 10px;
+    }
+    .man{
+        margin: 30px 5%;
+        width: 90%;
+    }
+    
+}
+
+/* Up Arrow */
+.upArrow{
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    font-size: 25px;
+    pointer-events: auto;
+    display: none;
+    z-index: 100;
+}
+
+.upArrow a{
+    color: #ff9900;
+}
+
+.upArrow a:hover{
+    color: #ff6600;
+}
+
+
+
+/*-------- About ---------*/
+.container{
+    margin: 30px 5%;
+}
+.about{
+    display: flex;
+    flex: 20% 80%;
+}
+.about .man2{
+    background-color: #e2e2e2;
+    padding: 10px 10px 0;
+}
+.about .man2 img{
+    width: 300px;
+}
+.about .content{
+    margin-left: 30px;
+    color: #fff;
+}
+h1{
+    padding-bottom: 20px;
+}
+.about .content .discription{
+    line-height: 1.3rem;
+    color: #d1d1d1;
+    font-size: 14px;
+}
+.about .content .about-btn{
+    padding: 20px 0;
+}
+.about .content .about-btn span{
+    margin-right: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+.about .content .about-btn .skill{
+    color: #ff9900;
+}
+.title{
+    color: #ff6600;
+    font-size: 14px;
+    padding-bottom: 3px;
+}
+.dis{
+    color: #d1d1d1;
+    font-size: 14px;
+}
+.about .content .slide-btn .slide2{
+    display: none;
+    
+}
+.about .content .slide-btn .slide2 .ex1{
+    padding-bottom: 5px;
+    font-size: 14px;
+    color: #d1d1d1;
+}
+.about .content .slide-btn .slide3{
+    display: none;
+}
+.about .content .slide-btn .slide3 .fa-linkedin{
+    color: #d1d1d1;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+.about .content .slide-btn .slide3 .fa-linkedin:hover{
+    color: #ff6600;
+}
+
+/*------About Responsive------*/
+@media screen and (max-width:890px){
+    .about{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .about .content{
+        margin: 0 10px 30px;
+        color: #fff;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .about .man2{
+        background-color: #e2e2e2;
+        padding: 10px 10px 0;
+        margin: 0 15%;
+        text-align: center;
+        width: 70%;
+    }
+    .about .man2 img{
+        width: 50%;
+    }
+   
+    
+}
+
+/*-------- Services ---------*/
+.services{
+    color: #fff;
+    margin-top: 40px;
+}
+.services .services-box{
+    display: flex;
+    gap: 20px;
+}
+.service1{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+.service1:hover{
+    background-color: #ff6600;
+}
+.service1 .title{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.service1 .title i {
+    font-size: 15px;
+}
+.service1 .dis{
+   color: #fff;
+}
+.service-images{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.service-images img{
+    width: 50%;
+}
+
+/*------Services Responsive------*/
+@media screen and (max-width:890px){
+    .services{
+        margin: 40px 10px 30px;
+    }
+    
+    .services .services-box{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+}
+
+/*-------- My-portfolio ---------*/
+.my-portfolio{
+    color: #fff;
+    padding-top: 40px;
+}
+.card {
+    transition: 0.3s;
+ 
+    border: 1px solid #fff;
+    position: relative;
+    transition: .4s;
+}
+.watchcode{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    background-color: #ff9900;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 18px;
+    display: none;
+    transition: .2s;
+    cursor: pointer;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    transition: .4s;
+}
+.card:hover > .overlay{
+    display: block;
+}
+.card:hover > button{
+    display: block;
+}
+button:hover{
+    background-color: #ff6600;
+}
+.card img{
+    width: 100%;
+}
+  
+.card .content {
+    padding: 10px 10px;
+}
+/*----Pagination section----*/
+.my-portfolio .swiper .dot{
+    margin-top: 50px;
+}
+.swiper-pagination-bullet{
+    background-color: #fff !important;
+}
+.swiper-pagination-bullet-active{
+    background-color: #007aff !important;
+}
+/*----Portfolio Responsive----*/
+@media screen and (max-width:890px){
+    .my-portfolio .card .content .dis{
+        font-size: 12px;
+    }
+    .my-portfolio{
+        margin: 0 10px;
+    }
+    .watchcode{
+        font-size: 12px;
+    }
+    
+}
+
+ /*---------Contact-------*/
+.contact{
+    margin-top: 30px;
+    color: #fff;
+}
+.contact .contact-box{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.contact .contact-box .form-box{
+    width: 70%;
+    padding: 20px;
+}
+.form-box form p {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0 5px;
+}
+.form-box form input{
+    height: 30px;
+}
+.form-box form input,textarea{
+    width: 90%;
+    padding: 0 5px;
+}
+.form-box form .form-submitbtn input{
+    width: 90px;
+    padding: 5px 10px;
+    background-color: #ff9900;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+.form-box form .form-submitbtn input:hover{
+    background-color: #ff6600;
+}
+
+.contact .contact-box .contact-info{
+    width: 30%;
+    padding: 20px;
+}
+.contact .contact-box .contact-info div{
+    margin-top: 15px;
+}
+
+.contact .contact-box .contact-info span{
+    margin-left: 10px;
+}
+.social-media-icon i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.social-media-icon i:hover{
+    color: #ff9900;
+}
+
+/*----Contact Responsive----*/
+@media screen and (max-width:890px){
+    .contact{
+        color: #fff;
+    }
+    .contact .contact-box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contact .contact-box .form-box{
+        width: 100%;
+        padding: 20px;
+    }
+    .contact .contact-box .contact-info{
+        width: 30%;
+        padding: 20px;
+    }
+    .contact .contact-box .contact-info{
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.copyright{
+    padding-top:30px ;
+    text-align: center;
+}
+.reveal{
+    animation: CSSscrollReveal ease-in both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 30%;
+
+}
+
+@keyframes CSSscrollReveal{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
